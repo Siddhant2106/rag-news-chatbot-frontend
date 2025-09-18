@@ -10,7 +10,8 @@
     "react-scripts": "^5.0.1",
     "sass": "^1.77.8",
     "socket.io-client": "^4.7.5",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "web-vitals": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
