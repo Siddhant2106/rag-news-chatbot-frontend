@@ -1,7 +1,7 @@
 import { io } from 'socket.io-client';
 
 const SOCKET_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-backend-url.onrender.com' 
+  ? 'https://rag-chatbot-backend-xs79.onrender.com' 
   : 'http://localhost:5000';
 
 export const socket = io(SOCKET_URL);
