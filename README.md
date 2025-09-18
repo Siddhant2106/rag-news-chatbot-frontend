@@ -1,46 +1,98 @@
-# Getting Started with Create React App
+# RAG News Chatbot Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend for the **RAG News Chatbot** application. It provides a chat interface where users can ask questions about recent news, and receive AI-generated answers with relevant news sources. The frontend is built with React and communicates with a backend server via REST API and WebSockets.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Chat with AI:** Ask questions about the latest news and get summarized answers.
+- **Source Attribution:** Each answer includes links to the news articles used.
+- **Session Management:** Start new chat sessions and clear previous conversations.
+- **Real-time Updates:** Uses WebSockets for instant message delivery.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/Siddhant2106/rag-news-chatbot-frontend.git
+   cd rag-news-chatbot-frontend
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Configure the backend URL (optional):**
+   - By default, the app connects to the backend at:
+     - `http://localhost:5000/api` (development)
+     - `https://rag-chatbot-backend-xs79.onrender.com/api` (production)
+   - To change this, edit `src/services/api.js` and `src/services/socket.js`.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Running the Application
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Development Mode
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+npm start
+```
+- Opens the app at [http://localhost:3000](http://localhost:3000).
+- The page reloads automatically on code changes.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Production Build
+
+```sh
+npm run build
+```
+- Builds the app for production to the `build` folder.
+
+---
+
+## Usage
+
+1. **Start the backend server** (see backend README for instructions).
+2. **Start the frontend** using `npm start`.
+3. Open your browser to [http://localhost:3000](http://localhost:3000).
+4. Type your news-related question in the chat box and press send.
+5. The chatbot will respond with a summary and links to relevant news articles.
+
+---
+
+## Project Structure
+
+- `src/pages/ChatPage.js` — Main chat interface.
+- `src/services/api.js` — Handles REST API calls.
+- `src/services/socket.js` — Handles WebSocket connections.
+- `src/components/` — UI components.
+
+---
+
+## Troubleshooting
+
+- **API errors:** Ensure the backend server is running and accessible.
+- **WebSocket issues:** Check that the backend supports socket connections and CORS is configured.
+- **Dependency errors:** Run `npm install` to ensure all packages are installed.
+
+---
+
+## License
+
+This project is for educational/demo purposes.
+
+---
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+-
